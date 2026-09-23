@@ -85,7 +85,7 @@ def loop_all_leaves(ABC_couvert, N_max, incli_top, incli_base, l, delta, longueu
         w_min=l_min*wl_min
         s_min,r_min = s*l_min, r*w_min
 
-        integral = np.trapz(r_min,s_min)
+        integral = np.trapezoid(r_min,s_min)
         w_min = w_min * (leaf_area / integral)
         s_min,r_min = s*l_min, (r*w_min)
         
@@ -137,7 +137,7 @@ def loop_all_leaves(ABC_couvert, N_max, incli_top, incli_base, l, delta, longueu
         w_min=l_min*wl_min
         s_min,r_min = s*l_min, r*w_min
 
-        integral = np.trapz(r_min,s_min)
+        integral = np.trapezoid(r_min,s_min)
         w_min = w_min * (leaf_area / integral)
         s_min,r_min = s*l_min, (r*w_min)* (area_shape[Leaf_OI] / cumulative_area) # Here is the correction
 
